@@ -1,0 +1,118 @@
+{
+	"variables": {
+		// Material Theme Dark HC color palette.
+		"white": "#ffffff",
+        "black": "#000000",
+        "red": "#f07178",
+        "orange": "#F78C6C",
+        "yellow": "#FFCB6B",
+        "green": "#C3E88D",
+        "cyan": "#89DDFF",
+        "blue": "#82AAFF",
+        "paleblue": "#B2CCD6",
+        "purple": "#C792EA",
+        "brown": "#916b53",
+        "pink": "#ff9cac",
+        "violet": "#bb80b3",
+
+		// Other variables.
+		"comments": "#545454",
+		"foreground": "#EEFFFF"
+	},
+	"globals": {
+		"foreground": "var(foreground)",
+		"background": "#212121",
+		"selection": "#61616150",
+		"caret": "#FFCC00",
+		"gutter_foreground": "color(#424242 l(+30%))",
+		"accent": "var(blue)",
+	},
+	"rules": [
+		{
+			"name": "Comments",
+			"scope": "comment, punctuation.definition.comment",
+			"foreground": "color(var(comments) l(+50%))",
+		},
+		{
+			"name": "String",
+			"scope": "string",
+			"foreground": "var(green)",
+		},
+		{
+			"name": "Punctuation",
+			"scope": "punctuation, punctuation.definition",
+			"foreground": "color(var(comments) l(+70%))",
+		},
+		{
+			"name": "Numbers",
+			"scope": "constant.numeric",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "Built in Constants",
+			"scope": "constant.language",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "User defined constants",
+			"scope": "constant.character, constant.other",
+			"foreground": "var(foreground)",
+		},
+		{
+			"scope": "variable.member",
+			"foreground": "red",
+		},
+		{
+            "name": "Keyword",
+            "scope": "keyword",
+            "foreground": "var(cyan)",
+            "font_style": "italic",
+        },
+       	{
+            "name": "Storage",
+            "scope": "storage",
+            "foreground": "var(purple)"
+        },
+        {
+        	"scope": "entity.name.function",
+        	"foreground": "var(blue)",
+        },
+        {
+            "name": "Entity name",
+            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Inherited class",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(red)",
+        },
+       	{
+            "name": "Function argument",
+            "scope": "variable.parameter",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Language variable",
+            "scope": "variable.language",
+            "foreground": "var(pink)",
+        },
+        {
+            "name": "Tag name",
+            "scope": "variable.function, variable.annotation",
+            "foreground": "var(blue)"
+        },
+        {
+            "name": "Library class/type",
+            "scope": "support.type, support.class",
+            "foreground": "red",
+            "font_style": "italic"
+        },
+
+        // CSS.
+        {
+        	"scope": "support.type.property-name",
+        	"foreground": "var(paleblue)",
+        }
+	]
+}
